@@ -30,6 +30,15 @@ class _SettingPageState extends State<SettingPage> {
           },
           child: Text("跳转注册页面页面"),
         ),
+        SizedBox(
+          height: 30,
+        ),
+        RaisedButton(
+          onPressed: () {
+            Navigator.pushNamed(context, "/button");
+          },
+          child: Text("跳转按钮页"),
+        )
       ],
     );
   }
