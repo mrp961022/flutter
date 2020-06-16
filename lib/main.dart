@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       // 最大的组件 根组件
       debugShowCheckedModeBanner: false, // 导航栏左上角不显示debug
-      initialRoute: '/button', // 初始化的时候加载的路由
+      initialRoute: '/', // 初始化的时候加载的路由
       onGenerateRoute: onGenerateRoute,
       // theme: ThemeData(
       //   // 颜色主题配置

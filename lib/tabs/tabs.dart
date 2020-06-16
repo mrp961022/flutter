@@ -29,6 +29,28 @@ class _TapsState extends State<Taps> {
     return Scaffold(
       // 脚手架 组件
       appBar: AppBar(title: Text("Flutter Demo")), // 头部组件
+      floatingActionButton: Container(
+        width: 80,
+        height: 80,
+        padding: EdgeInsets.all(4),
+        margin: EdgeInsets.only(bottom: 10),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(40),
+          color: Colors.white,
+        ),
+        child: FloatingActionButton(
+          child: Icon(Icons.add),
+          backgroundColor: this._currentIndex == 1 ? Colors.red : Colors.yellow,
+          onPressed: () {
+            print("FloatingActionButton tabs");
+            setState(() {
+              this._currentIndex = 1;
+            });
+          },
+        ),
+      ),
+      floatingActionButtonLocation:
+          FloatingActionButtonLocation.centerDocked, // 居中 在底部
       drawer: Drawer(
           child: Column(
         children: <Widget>[
@@ -105,7 +127,8 @@ class _TapsState extends State<Taps> {
       body: this._pageList[this._currentIndex], // 内容
       bottomNavigationBar: BottomNavigationBar(
         // iconSize: 22, // icon大小
-        // fixedColor: Colors.red, // 选中颜色
+        fixedColor: Colors.red, // 选中颜色
+        unselectedItemColor: Colors.yellow, // 未选中的颜色
         type: BottomNavigationBarType.fixed, // 配置导航栏可以有多个按钮
         currentIndex: this._currentIndex, // 默认选中哪一个
         onTap: (int index) => {
