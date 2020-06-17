@@ -11,6 +11,9 @@ import '../all_dart/appbar_demo.dart';
 import '../all_dart/tabbar_controller.dart';
 import '../pags/user.dart';
 import '../all_dart/all_button.dart';
+import '../all_dart/all_form/checkbox_demo.dart';
+import '../all_dart/all_form/form_demo.dart';
+import '../all_dart/all_form/radio_demo.dart';
 
 //配置路由
 final routes = {
@@ -25,7 +28,10 @@ final routes = {
   '/appbar': (context) => AppBarPage(),
   '/tabbar': (context) => TabBarControllerPage(),
   '/user': (context) => UserPage(),
-  '/button': (context) => ButtonDemoPage()
+  '/button': (context) => ButtonDemoPage(),
+  '/formdemo': (context) => FormDemoPage(),
+  '/checkbox': (context) => CheckDemoPage(),
+  '/radio': (context) => RadioDemoPage()
 };
 
 //固定写法

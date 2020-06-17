@@ -58,13 +58,29 @@ class _CategoryPageState extends State<CategoryPage> {
                 ),
               ],
             ),
-            ListView(
+            Column(
               children: <Widget>[
-                ListTile(title: Text("第二个tab页")),
-                ListTile(title: Text("第二个tab页")),
-                ListTile(title: Text("第二个tab页")),
-                ListTile(title: Text("第二个tab页")),
-                ListTile(title: Text("第二个tab页")),
+                SizedBox(height: 100),
+                RaisedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/formdemo");
+                  },
+                  child: Text("表单页面"),
+                ),
+                SizedBox(height: 30),
+                RaisedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/checkbox");
+                  },
+                  child: Text("checkbox"),
+                ),
+                SizedBox(height: 30),
+                RaisedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/radio");
+                  },
+                  child: Text("radioDemo"),
+                ),
               ],
             )
           ],
