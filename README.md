@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
 > Image 图片 本地加载图片的方式 需要新建2.0x 3.0x 4.0x 文件夹
 #### 加载远程图片 
 ```
-Image.network("图片的路径");
+Image.network("图片的路径"); // 设备需要联网加载远程图片
 ```
 #### 加载本地图片 首先在pubspec.yaml文件中新增以下代码 下面是文件路径
 ```
